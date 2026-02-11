@@ -4,15 +4,19 @@ function Options() {
   const { questions, dispatch, answer, index } = useQuiz();
   const hasAnswered = answer !== null;
 
+  const question = questions[index];
+
+  if (!question) return null; // 👈 proteção importante
+
   return (
     <div className="options">
-      {questions[index].options.map((option, i) => (
+      {question.options.map((option, i) => (
         <button
           className={`btn btn-option 
             ${i === answer ? "answer" : ""} 
             ${
               hasAnswered
-                ? i === questions[index].correctOption
+                ? i === question.correctOption
                   ? "correct"
                   : "wrong"
                 : ""
