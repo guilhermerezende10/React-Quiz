@@ -81,7 +81,7 @@ function QuizProvider({ children }) {
     async function fetchData() {
       try {
         const res = await fetch("https://the-react-quiz-project.netlify.app/.netlify/functions/questions");
-        const data = await res.json();
+        const data = await res.json().questions;
         console.log(data)
         dispatch({ type: "dataReceived", payload: data });
       } catch (err) {
