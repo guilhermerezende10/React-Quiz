@@ -74,20 +74,24 @@ function QuizProvider({ children }) {
 
   const maxPossiblePoints = questions.reduce(
     (prev, cur) => prev + cur.points,
-    0
+    0,
   );
 
   useEffect(function () {
     async function fetchData() {
       try {
-        const res = await fetch("https://the-react-quiz-project.netlify.app/.netlify/functions/questions");
-        const data = await res.json()[0];
-        console.log(data)
-        dispatch({ type: "dataReceived", payload: data });
+        const res = await fetch(
+          "https://the-react-quiz-project.netlify.app/.netlify/functions/questions",
+        );
+
+        const data = await res.json();
+
+        dispatch({ type: "dataReceived", payload: data.questions });
       } catch (err) {
         dispatch({ type: "dataFailed" });
       }
     }
+
     fetchData();
   }, []);
 
