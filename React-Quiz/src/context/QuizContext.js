@@ -80,7 +80,7 @@ function QuizProvider({ children }) {
   useEffect(function () {
     async function fetchData() {
       try {
-        const res = await fetch("http://localhost:9000/questions");
+        const res = await fetch("https://the-react-quiz-project.netlify.app/.netlify/functions/questions");
         const data = await res.json();
         dispatch({ type: "dataReceived", payload: data });
       } catch (err) {
