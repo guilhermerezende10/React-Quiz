@@ -8,13 +8,87 @@
 
 <img src="imagem.png" alt="Exemplo imagem">
 
->  This project leverages React.js, modular components, and state management with useReducer to create a smooth, engaging gameplay experience. It also integrates API calls for fetching quiz questions dynamically.
-### Ajustes e melhorias
+# 🧠 React Quiz
 
-This project may be updated, below you can find possible addictions:
+Aplicação web de quiz interativo desenvolvida com React, que consome uma API hospedada no Netlify para carregamento dinâmico de perguntas.
 
-- [x] Timer based on number of questions.
-- [x] Highscore state to save best results data.
-- [ ] Allow the user to filter for the difficulty of questions.
-- [ ] Upload the highscore of que quiz in the API as well.
-- [ ] Store answers in an array for the user review their answers.
+O projeto foi construído com foco em gerenciamento de estado, organização de componentes e controle de fluxo da aplicação.
+
+---
+
+## 🌐 Deploy
+
+🔗 Aplicação: (COLOQUE O LINK AQUI)  
+🔗 API (Netlify): (COLOQUE O LINK DA API AQUI)
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+### 🖥️ Front-end
+- React
+- JavaScript
+- CSS
+- HTML
+
+### 🔄 Gerenciamento de Estado
+- useState
+- useReducer
+
+### 🌍 API
+- API própria hospedada no Netlify
+- Consumo de dados via requisições HTTP (fetch)
+
+### 🛠️ Ferramentas
+- Git
+- GitHub
+
+---
+
+## ✨ Funcionalidades
+
+- ✅ Carregamento dinâmico de perguntas via API
+- ✅ Controle de progresso do quiz
+- ✅ Sistema de pontuação
+- ✅ Feedback visual para respostas corretas e incorretas
+- ✅ Tela de resultado final
+- ✅ Reinício do quiz
+- ✅ Interface simples e responsiva
+
+---
+
+## 🧠 Conceitos Aplicados
+
+- Componentização com React
+- Gerenciamento de estado complexo com `useReducer`
+- Controle de fluxo da aplicação
+- Manipulação de dados recebidos da API
+- Tratamento de estados de carregamento e erro
+- Separação entre camada de apresentação e dados
+
+---
+
+## 🔄 Fluxo da Aplicação
+
+1. A aplicação realiza requisição à API
+2. As perguntas são carregadas dinamicamente
+3. O usuário responde às perguntas
+4. O sistema calcula e atualiza a pontuação
+5. Ao final, é exibido o resultado com opção de reiniciar
+
+---
+
+## 📦 Como rodar o projeto localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/guilhermerezende10/React-Quiz.git
+
+# Entre na pasta
+cd React-Quiz
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm start
